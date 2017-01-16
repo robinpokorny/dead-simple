@@ -6,18 +6,20 @@
   "scripts": {
     "lerna": "lerna",
     "pretest": "lerna run compile",
-    "test": "standard"
+    "test": "standard && jest"
   },
   "author": "Robin Pokorny <me@robinpokorny.com> (http://robinpokorny.com)",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
+    "jest": "^18.1.0",
     "lerna": "2.0.0-beta.32",
     "standard": "^8.6.0"
   },
   "babel": {
-    "ignore": "node_modules,lib",
-    "presets": [ "es2015" ]
+    "presets": [
+      "es2015"
+    ]
   }
 }

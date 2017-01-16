@@ -2,10 +2,10 @@
   "name": "ds-pubsub",
   "version": "1.0.0",
   "description": "Dead simple tweetable JavaScript PubSub",
-  "main": "lib/index.js",
+  "main": "main.js",
   "scripts": {
-    "compile": "babel . -d lib -q",
-    "prepublish": "npm run compile",
+    "compile": "babel index.js -o main.js",
+    "prepublish": "yarn run compile",
     "test": "echo \"Error: run test in repo root\" && exit 1"
   },
   "devDependencies": {
