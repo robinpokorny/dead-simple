@@ -1,0 +1,8 @@
+# Libraries
+node_modules
+
+# Generated files
+lib
+
+# Debug files
+lerna-debug.log

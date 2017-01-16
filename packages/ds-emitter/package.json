@@ -1,0 +1,19 @@
+{
+  "name": "ds-emitter",
+  "version": "1.0.0",
+  "description": "Dead simple tweetable JavaScript EventEmitter",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "babel . -d lib -q",
+    "prepublish": "npm run compile",
+    "test": "echo \"Error: run test in repo root\" && exit 1"
+  },
+  "dependencies": {
+    "ds-pubsub": "1.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "*"
+  },
+  "author": "Robin Pokorny <me@robinpokorny.com> (http://robinpokorny.com)",
+  "license": "MIT"
+}
