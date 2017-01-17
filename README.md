@@ -10,9 +10,17 @@
 
 
 ## DS-PubSub
-https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f
+Based on: https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f
 
-### Browser compatibility ([all](https://kangax.github.io/compat-table/es6/#test-Set))
+### Features
+* **Small:** 127 bytes. Gzipped: 127 bytes (Yes, you read that right)
+* **No dependencies:**
+* **Best practices:**
+* **Readible:**
+* **Efficient:**
+* **Clean API:** `sub` and `pub`, need no more, can't go less.
+
+### Browser compatibility
 
 Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
 ---------|------|----|-----|-------|--------|----
@@ -24,7 +32,7 @@ Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
 
 
 ## DS-EventEmitter
-https://gist.github.com/robinpokorny/dd97bd013dc5198a5bd0556c591f661c
+Based on: https://gist.github.com/robinpokorny/dd97bd013dc5198a5bd0556c591f661c
 
 ### Browser compatibility
 
