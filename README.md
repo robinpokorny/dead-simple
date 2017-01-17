@@ -16,9 +16,11 @@ https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f
 
 Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
 --------|------|----|------|-------|--------|----
-38      |   12 | 13 | 11\* |    25 |    7.1 |   8
+38      |   12 | 13 | -\* |    25 |    7.1 |   8
 
-*Notes:* Chrome includes mobile Chrome. IE 11 [does not support](https://kangax.github.io/compat-table/es6/#test-Set_Set.prototype.add_returns_this) the super-minified version.
+*Notes:*
+ * Chrome includes mobile Chrome.
+ * IE 11 does not support only arrow functions, they can be replaced with `function`. Also, [incomplete Set support](https://kangax.github.io/compat-table/es6/#test-Set_Set.prototype.add_returns_this) means the hand-minified version does not work.
 
 
 ## DS-EventEmitter
