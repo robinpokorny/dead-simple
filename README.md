@@ -15,8 +15,8 @@ https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f
 ### Browser compatibility ([all](https://kangax.github.io/compat-table/es6/#test-Set))
 
 Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
---------|------|----|------|-------|--------|----
-38      |   12 | 13 | -\* |    25 |    7.1 |   8
+---------|------|----|-----|-------|--------|----
+38       |   12 | 13 | -\* |    25 |    7.1 |   8
 
 *Notes:*
  * Chrome includes mobile Chrome.
@@ -25,3 +25,13 @@ Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
 
 ## DS-EventEmitter
 https://gist.github.com/robinpokorny/dd97bd013dc5198a5bd0556c591f661c
+
+### Browser compatibility
+
+Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
+---------|------|----|-----|-------|--------|----
+38       |   12 | 13 | -\* |    25 |    7.1 |   8
+
+*Notes:*
+ * Chrome includes mobile Chrome.
+ * IE 11 does not support only arrow functions, they can be replaced with `function`. See, [ds-pubsub](#ds-pubsub) for more compatibility info of that package.
