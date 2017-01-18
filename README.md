@@ -35,8 +35,8 @@ Chrome\* | Edge | FF | IE  | Opera | Safari | iOS | Node
 
 *Notes:*
  * Chrome includes mobile Chrome (Android 4+).
- * IE 11 does not support only arrow functions and object shorthand. This is a small fix.
- * The module needs to bundled, of course.
+ * IE 11 does *not* support only syntax feature, arrow functions and object shorthand.
+ * The module needs to be bundled, of course.
 
 ### Super small versions
 This project started a [pair](https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f) of [gists](https://gist.github.com/robinpokorny/dd97bd013dc5198a5bd0556c591f661c) which included a hand minified version, too.
