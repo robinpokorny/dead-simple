@@ -39,4 +39,11 @@ describe('PubSub', () => {
     expect(callback).toHaveBeenCalledTimes(1)
     expect(callback).toHaveBeenCalledWith('foo')
   })
+
+  it('does not leak on pub', () => {
+    events.sub(callback)
+    const result = events.pub('foo')
+
+    expect(result).toBeUndefined()
+  })
 })
