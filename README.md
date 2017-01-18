@@ -1,4 +1,4 @@
-# Dead simple PubSub and EventEmitter
+# :skull::bulb: Dead simple PubSub and EventEmitter
 > Small readable almost-tweetable modules utilising classic patterns in modern language.
 
 [![Build Status](https://img.shields.io/badge/build-passed-brightgreen.svg?style=flat-square)](https://semaphoreci.com/robinpokorny/dead-simple)
