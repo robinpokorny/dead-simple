@@ -1,11 +1,11 @@
 {
-  "private": true,
   "name": "dead-simple",
   "version": "1.0.0",
-  "description": "Dead simple tweetable JavaScript PubSub and EventEmitter",
+  "description": "Dead simple PubSub and EventEmitter in JavaScript",
+  "main": "./lib/index.js",
   "scripts": {
-    "lerna": "lerna",
-    "pretest": "lerna run compile",
+    "compile": "babel src --out-dir lib",
+    "prepublish": "yarn run compile",
     "test": "standard && jest"
   },
   "author": "Robin Pokorny <me@robinpokorny.com> (http://robinpokorny.com)",
@@ -14,8 +14,26 @@
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "jest": "^18.1.0",
-    "lerna": "2.0.0-beta.32",
     "standard": "^8.6.0"
+  },
+  "keywords": [
+    "EventEmitter",
+    "EventEmitter2",
+    "EventEmitter3",
+    "Events",
+    "addEventListener",
+    "addListener",
+    "emit",
+    "emits",
+    "emitter",
+    "event",
+    "pubsub",
+    "publish",
+    "subscribe"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinpokorny/dead-simple"
   },
   "babel": {
     "presets": [

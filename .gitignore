@@ -2,7 +2,4 @@
 node_modules
 
 # Generated files
-main.js
-
-# Debug files
-lerna-debug.log
+lib
