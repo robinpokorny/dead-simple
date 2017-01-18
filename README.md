@@ -13,11 +13,10 @@
 Based on: https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f
 
 ### Features
-* **Small:** 127 bytes. Gzipped: 127 bytes (Yes, you read that right)
-* **No dependencies:**
-* **Best practices:**
-* **Readible:**
-* **Efficient:**
+* **Small:** 127 bytes. Gzipped: 127 bytes. (Yes, you read that right.)
+* **Best practices:** Returns unsubscribe. So you can use anonymous functions. 
+* **Readible:** There is nothing magical in the code; except the simplicity.
+* **Efficient:** No memory-leaks, no duplicate calls, no extra looping.
 * **Clean API:** `sub` and `pub`, need no more, can't go less.
 
 ### Browser compatibility
