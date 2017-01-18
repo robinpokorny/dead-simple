@@ -4,8 +4,7 @@
   "description": "Dead simple PubSub and EventEmitter in JavaScript",
   "main": "./index.js",
   "scripts": {
-    "compile": "babel src --out-dir lib",
-    "prepublish": "yarn run compile",
+    "prepublish": "yarn test",
     "test": "standard && jest"
   },
   "author": "Robin Pokorny <me@robinpokorny.com> (http://robinpokorny.com)",

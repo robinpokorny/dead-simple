@@ -2,30 +2,36 @@
 const pubsub = require('./pubsub')
 
 describe('PubSub', () => {
+  let events
+  const callback = jest.fn()
+
+  beforeEach(() => {
+    events = pubsub()
+    callback.mockClear()
+  })
+
   it('works', () => {
-    const events = pubsub()
-
-    const one = jest.fn()
-    events.sub(one)
-
-    const two = jest.fn()
-    events.sub(two)
-    const unSubTwo = events.sub(two)
-
+    events.sub(callback)
     events.pub('foo')
 
-    expect(one).toHaveBeenCalledTimes(1)
-    expect(one).toHaveBeenCalledWith('foo')
-    expect(two).toHaveBeenCalledTimes(1)
-    expect(two).toHaveBeenCalledWith('foo')
+    expect(callback).toHaveBeenCalledTimes(1)
+    expect(callback).toHaveBeenCalledWith('foo')
+  })
 
-    one.mockClear()
-    two.mockClear()
+  it('removes callback when it is unsubscibed', () => {
+    const unSub = events.sub(callback)
+    unSub()
+    events.pub('foo')
 
-    unSubTwo()
-    events.pub('bar')
-    expect(one).toHaveBeenCalledTimes(1)
-    expect(one).toHaveBeenCalledWith('bar')
-    expect(two).not.toHaveBeenCalled()
+    expect(callback).not.toHaveBeenCalled()
+  })
+
+  it('does not call a callback twice', () => {
+    events.sub(callback)
+    events.sub(callback)
+    events.pub('foo')
+
+    expect(callback).toHaveBeenCalledTimes(1)
+    expect(callback).toHaveBeenCalledWith('foo')
   })
 })
