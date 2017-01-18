@@ -26,8 +26,9 @@ Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
 38       |   12 | 13 | -\* |    25 |    7.1 |   8
 
 *Notes:*
- * Chrome includes mobile Chrome.
+ * Chrome includes mobile Chrome (Android 4+).
  * IE 11 does not support only arrow functions, they can be replaced with `function`. Also, [incomplete Set support](https://kangax.github.io/compat-table/es6/#test-Set_Set.prototype.add_returns_this) means the hand-minified version does not work.
+ * The module needs to bundled, of course.
 
 
 ## DS-EventEmitter
