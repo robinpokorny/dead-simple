@@ -23,13 +23,19 @@
 
 ### Browser compatibility
 
-Chrome\* | Edge | FF | IE   | Opera | Safari | iOS
----------|------|----|------|-------|--------|----
-38       |   12 | 13 | 11\* |    25 |    7.1 |   8
+Used ES6: [const](http://kangax.github.io/compat-table/es6/#test-const),
+[arrow functions](http://kangax.github.io/compat-table/es6/#test-arrow_functions),
+[Map](http://kangax.github.io/compat-table/es6/#test-Map),
+[Set](http://kangax.github.io/compat-table/es6/#test-Set),
+[object shorthand](http://kangax.github.io/compat-table/es6/#test-object_literal_extensions_shorthand_properties)
+
+Chrome\* | Edge | FF | IE  | Opera | Safari | iOS | Node
+---------|------|----|-----|-------|--------|-----|-----
+38       |   12 | 13 | -\* |    25 |    7.1 |   8 |    4
 
 *Notes:*
  * Chrome includes mobile Chrome (Android 4+).
- * IE 11 does not support only arrow functions, they can be replaced with `function`.
+ * IE 11 does not support only arrow functions and object shorthand. This is a small fix.
  * The module needs to bundled, of course.
 
 ### Super small versions
