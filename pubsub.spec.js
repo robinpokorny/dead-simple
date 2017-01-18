@@ -10,7 +10,12 @@ describe('PubSub', () => {
     callback.mockClear()
   })
 
-  it('works', () => {
+  it('has simple API', () => {
+    const keys = Object.keys(events).sort().join()
+    expect(keys).toBe('pub,sub')
+  })
+
+  it('passes data to callback', () => {
     events.sub(callback)
     events.pub('foo')
 
