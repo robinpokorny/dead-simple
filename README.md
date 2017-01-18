@@ -6,7 +6,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-lightgrey.svg?style=flat-square)](http://standardjs.com/)
 [![Managed by Yarn](https://img.shields.io/badge/managed%20by-Yarn-2C8EBB.svg?style=flat-square)](https://yarnpkg.com/)
 
-### Features
+## Features
 * **Small:** PubSub: 127 bytes, EventEmitter: 138 bytes, **together: 191 bytes** (all gzipped)
 * **Best practices:** Subscribe returns unsubscribe. So you can use anonymous functions.
 * **Readible:** There is nothing magical in the code; except the simplicity.
@@ -15,9 +15,48 @@
 * **Clean API:** `sub` and `pub` (or `on` and `emit`), need no more, can't go less.
 * **Modular:** Use only what you need.
 
-## DS-PubSub
+## Install
 
-## DS-EventEmitter
+## Usage
+
+```js
+import pubsub from 'dead-simple/pubsub'
+import eventEmitter from 'dead-simple/eventEmitter'
+// Alternatively: 
+// import { pubsub, eventEmitter } from 'dead-simple'
+
+// === PubSub ======
+const clicks = pubsub()
+
+const unSub = clicks.sub((target) => console.log(`Clicked on ${target}!`))
+
+clicks.pub('button')
+// -> Clicked on button!
+
+unSub()
+
+clicks.pub('link')
+// nothing
+
+
+// === eventEmitter ===
+// eventEmitter = named PubSub
+consts events = eventEmitter()
+
+clicks.on('click', (target) => console.log(`Clicked on ${target}!`))
+const unSubChange = clicks.on('change', (newValue) => console.log(`Value is now ${newValue}!`))
+
+events.emit('change', 1968)
+// -> Value is now 1968!
+
+unSubChange()
+
+events.emit('change', 1968)
+// nothing
+
+clicks.pub('click', 'button')
+// -> Clicked on button!
+```
 
 ---
 
