@@ -8,38 +8,42 @@
 
 > Small readable almost-tweetable modules utilising classic patterns in modern language.
 
+### Features
+* **Small:** PubSub: 127 bytes, EventEmitter: 138 bytes, **together: 191 bytes** (all gzipped)
+* **Best practices:** Subscribe returns unsubscribe. So you can use anonymous functions.
+* **Readible:** There is nothing magical in the code; except the simplicity.
+* **Modern:** Uses new, yet [well-supported](#browser-compatibility) features.
+* **Efficient:** No memory-leaks, no duplicate calls, no extra looping.
+* **Clean API:** `sub` and `pub` (or `on` and `emit`), need no more, can't go less.
 
 ## DS-PubSub
-Based on: https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f
 
-### Features
-* **Small:** 127 bytes. Gzipped: 127 bytes. (Yes, you read that right.)
-* **Best practices:** Returns unsubscribe. So you can use anonymous functions. 
-* **Readible:** There is nothing magical in the code; except the simplicity.
-* **Efficient:** No memory-leaks, no duplicate calls, no extra looping.
-* **Clean API:** `sub` and `pub`, need no more, can't go less.
+## DS-EventEmitter
+
+---
 
 ### Browser compatibility
 
-Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
----------|------|----|-----|-------|--------|----
-38       |   12 | 13 | -\* |    25 |    7.1 |   8
+Chrome\* | Edge | FF | IE   | Opera | Safari | iOS
+---------|------|----|------|-------|--------|----
+38       |   12 | 13 | 11\* |    25 |    7.1 |   8
 
 *Notes:*
  * Chrome includes mobile Chrome (Android 4+).
- * IE 11 does not support only arrow functions, they can be replaced with `function`. Also, [incomplete Set support](https://kangax.github.io/compat-table/es6/#test-Set_Set.prototype.add_returns_this) means the hand-minified version does not work.
+ * IE 11 does not support only arrow functions, they can be replaced with `function`.
  * The module needs to bundled, of course.
 
+### Super small versions
+This project started a [pair](https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f) of [gists](https://gist.github.com/robinpokorny/dd97bd013dc5198a5bd0556c591f661c) which included a hand minified version, too.
 
-## DS-EventEmitter
-Based on: https://gist.github.com/robinpokorny/dd97bd013dc5198a5bd0556c591f661c
+We were able to get down to **91B** for PubSub: 
+```js
+export default (s=new Set)=>({pub:d=>s.forEach(f=>f(d)),sub:f=>s.add(f).delete.bind(s,f)})
+```
 
-### Browser compatibility
+And **139B** for EventEmitter (`p` is PubSub):
+```js
+export default e=>(e=new Map, Object.freeze({on:(n,f)=>(e.has(name)||e.set(n,p()),e.get(n).sub(f)),emit:(n,d)=>e.has(n)&&e.get(n).pub(d)}))
+```
 
-Chrome\* | Edge | FF | IE  | Opera | Safari | iOS
----------|------|----|-----|-------|--------|----
-38       |   12 | 13 | -\* |    25 |    7.1 |   8
-
-*Notes:*
- * Chrome includes mobile Chrome.
- * IE 11 does not support only arrow functions, they can be replaced with `function`. See, [ds-pubsub](#ds-pubsub) for more compatibility info of that package.
+These versions are for fun, more like a proof of concept and may not work in some browsers.
