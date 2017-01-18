@@ -15,6 +15,7 @@
 * **Modern:** Uses new, yet [well-supported](#browser-compatibility) features.
 * **Efficient:** No memory-leaks, no duplicate calls, no extra looping.
 * **Clean API:** `sub` and `pub` (or `on` and `emit`), need no more, can't go less.
+* **Modular:** Use only what you need.
 
 ## DS-PubSub
 
