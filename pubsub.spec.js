@@ -1,5 +1,5 @@
 /* eslint-env jest */
-import pubsub from './'
+const pubsub = require('./pubsub')
 
 describe('PubSub', () => {
   it('works', () => {

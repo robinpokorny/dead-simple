@@ -1,6 +1,6 @@
-import pubsub from 'ds-pubsub'
+const pubsub = require('./pubsub')
 
-export default () => {
+module.exports = () => {
   const events = new Map()
 
   const on = (name, fn) => {

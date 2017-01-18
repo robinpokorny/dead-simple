@@ -1,4 +1,4 @@
-export default () => {
+module.exports = () => {
   const subscribers = new Set()
 
   const sub = (fn) => {
