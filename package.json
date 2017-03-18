@@ -11,7 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "jest": "^19.0.0",
-    "standard": "^8.6.0"
+    "standard": "^9.0.2"
   },
   "keywords": [
     "EventEmitter",
