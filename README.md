@@ -1,5 +1,5 @@
 # :skull::bulb: Dead simple PubSub and EventEmitter
-> Small readable almost-tweetable modules utilising classic patterns in modern language.
+> Small, readable, almost-tweetable modules utilising classic patterns in modern language.
 
 [![Build Status](https://img.shields.io/badge/build-passed-brightgreen.svg?style=flat-square)](https://semaphoreci.com/robinpokorny/dead-simple)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/robinpokorny/dead-simple/blob/master/LICENSE)
@@ -9,9 +9,9 @@
 ## Features
 * **Small:** PubSub: 127 bytes, EventEmitter: 138 bytes, **together: 191 bytes** (all gzipped)
 * **Best practices:** Subscribe returns unsubscribe. So you can use anonymous functions.
-* **Readible:** There is nothing magical in the code; except the simplicity.
+* **Readable:** There is nothing magical in the code; except the simplicity.
 * **Modern:** Uses new, yet [well-supported](#browser-compatibility) features.
-* **Efficient:** No memory-leaks, no duplicate calls, no extra looping.
+* **Efficient:** No memory leaks, no duplicate calls, no extra looping.
 * **Clean API:** `sub` and `pub` (or `on` and `emit`), need no more, can't go less.
 * **Modular:** Use only what you need.
 
@@ -22,7 +22,7 @@
 ```js
 import pubsub from 'dead-simple/pubsub'
 import eventEmitter from 'dead-simple/eventEmitter'
-// Alternatively: 
+// Alternatively:
 // import { pubsub, eventEmitter } from 'dead-simple'
 
 // === PubSub ======
@@ -80,7 +80,7 @@ Chrome\* | Edge | FF | IE  | Opera | Safari | iOS | Node
 ### Super small versions
 This project started a [pair](https://gist.github.com/robinpokorny/d743ed9e0bc5214f79076a16c8e44a8f) of [gists](https://gist.github.com/robinpokorny/dd97bd013dc5198a5bd0556c591f661c) which included a hand minified version, too.
 
-We were able to get down to **91B** for PubSub: 
+We were able to get down to **91B** for PubSub:
 ```js
 export default (s=new Set)=>({pub:d=>s.forEach(f=>f(d)),sub:f=>s.add(f).delete.bind(s,f)})
 ```
