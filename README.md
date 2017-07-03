@@ -3,7 +3,7 @@
 
 [![Build Status](https://img.shields.io/badge/build-passed-brightgreen.svg?style=flat-square)](https://semaphoreci.com/robinpokorny/dead-simple)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/robinpokorny/dead-simple/blob/master/LICENSE)
-[![git3moji](https://img.shields.io/badge/git3moji-%E2%9A%A1%EF%B8%8F%20%F0%9F%90%9B-fffad8.svg?style=flat-square)]
+[![git3moji](https://img.shields.io/badge/git3moji-%E2%9A%A1%EF%B8%8F%20%F0%9F%90%9B-fffad8.svg?style=flat-square)](https://robinpokorny.github.io/git3moji/)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-lightgrey.svg?style=flat-square)](http://standardjs.com/)
 [![Managed by Yarn](https://img.shields.io/badge/managed%20by-Yarn-2C8EBB.svg?style=flat-square)](https://yarnpkg.com/)
 
