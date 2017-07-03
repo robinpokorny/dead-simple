@@ -17,6 +17,14 @@
 
 ## Install
 
+Install using `yarn` or `npm`:
+
+```sh
+yarn add dead-simple
+# or via npm
+npm install --save dead-simple
+```
+
 ## Usage
 
 ```js
@@ -41,10 +49,11 @@ clicks.pub('link')
 
 // === eventEmitter ===
 // eventEmitter = named PubSub
-consts events = eventEmitter()
+const events = eventEmitter()
 
-clicks.on('click', (target) => console.log(`Clicked on ${target}!`))
-const unSubChange = clicks.on('change', (newValue) => console.log(`Value is now ${newValue}!`))
+events.on('click', (target) => console.log(`Clicked on ${target}!`))
+
+const unSubChange = events.on('change', (newValue) => console.log(`Value is now ${newValue}!`))
 
 events.emit('change', 1968)
 // -> Value is now 1968!
@@ -54,7 +63,7 @@ unSubChange()
 events.emit('change', 1968)
 // nothing
 
-clicks.pub('click', 'button')
+events.emit('click', 'button')
 // -> Clicked on button!
 ```
 
