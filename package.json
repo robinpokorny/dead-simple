@@ -10,7 +10,7 @@
   "author": "Robin Pokorny <me@robinpokorny.com> (http://robinpokorny.com)",
   "license": "MIT",
   "devDependencies": {
-    "jest": "20.0.4",
+    "jest": "21.0.0",
     "standard": "10.0.3"
   },
   "keywords": [
