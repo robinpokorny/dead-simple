@@ -1,4 +1,4 @@
-const pubsub = require('./pubsub')
-const eventEmitter = require('./eventEmitter')
+const pubsub = require("./pubsub");
+const eventEmitter = require("./eventEmitter");
 
-module.exports = { pubsub, eventEmitter }
+module.exports = { pubsub, eventEmitter };
