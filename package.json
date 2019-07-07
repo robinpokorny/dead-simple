@@ -5,13 +5,15 @@
   "main": "./index.js",
   "scripts": {
     "prepublish": "yarn test",
-    "test": "standard && jest"
+    "test": "jest"
   },
   "author": "Robin Pokorny <me@robinpokorny.com> (http://robinpokorny.com)",
   "license": "MIT",
   "devDependencies": {
-    "jest": "21.0.0",
-    "standard": "11.0.0"
+    "husky": ">=1",
+    "jest": "24.8.0",
+    "lint-staged": ">=8",
+    "prettier": "1.18.2"
   },
   "keywords": [
     "EventEmitter",
@@ -31,5 +33,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/robinpokorny/dead-simple"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
