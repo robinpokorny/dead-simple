@@ -12,7 +12,7 @@
   "devDependencies": {
     "husky": ">=1",
     "jest": "24.8.0",
-    "lint-staged": ">=8",
+    "lint-staged": ">=9.2.5",
     "prettier": "1.18.2"
   },
   "keywords": [
