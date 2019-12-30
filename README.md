@@ -2,7 +2,7 @@
 
 > Small, readable, almost-tweetable modules utilising classic patterns in modern language.
 
-[![Build Status](https://img.shields.io/badge/build-passed-brightgreen.svg?style=flat-square)](https://semaphoreci.com/robinpokorny/dead-simple)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/robinpokorny/dead-simple/Node%20CI/master?style=flat-square)](https://github.com/robinpokorny/dead-simple/actions)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/robinpokorny/dead-simple/blob/master/LICENSE)
 [![git3moji](https://img.shields.io/badge/git3moji-%E2%9A%A1%EF%B8%8F%F0%9F%90%9B%F0%9F%93%BA%F0%9F%91%AE%F0%9F%94%A4-fffad8.svg?style=flat-square)](https://robinpokorny.github.io/git3moji/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
