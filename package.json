@@ -11,9 +11,9 @@
   "license": "MIT",
   "devDependencies": {
     "husky": ">=1",
-    "jest": "24.8.0",
+    "jest": "26.6.1",
     "lint-staged": ">=8",
-    "prettier": "1.19.0"
+    "prettier": "2.1.2"
   },
   "keywords": [
     "EventEmitter",
