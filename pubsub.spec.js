@@ -11,9 +11,7 @@ describe("PubSub", () => {
   });
 
   it("has simple API", () => {
-    const keys = Object.keys(events)
-      .sort()
-      .join();
+    const keys = Object.keys(events).sort().join();
     expect(keys).toBe("pub,sub");
   });
 

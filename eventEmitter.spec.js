@@ -13,9 +13,7 @@ describe("Event Emitter", () => {
   });
 
   it("has simple API", () => {
-    const keys = Object.keys(emitter)
-      .sort()
-      .join();
+    const keys = Object.keys(emitter).sort().join();
     expect(keys).toBe("emit,on");
   });
 
