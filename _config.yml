@@ -1,2 +1,43 @@
+title: Dead simple
+description: '💀💡 Dead simple PubSub and EventEmitter in JavaScript'
+baseurl: '/dead-simple'
+url: 'https://robinpokorny.github.io'
+
 remote_theme: pmarsceill/just-the-docs
 
+plugins:
+  - jemoji
+
+permalink: pretty
+exclude:
+  [
+    'node_modules/',
+    '*.js',
+    '*.ts',
+    'package.json',
+    'yarn.lock',
+    'LICENSE',
+    'Gemfile',
+    'Gemfile.lock',
+  ]
+heading_anchors: true
+
+aux_links:
+  'Fork me on GitHub':
+    - 'https://github.com/robinpokorny/dead-simple'
+
+search_enabled: false
+
+footer_content: 'Copyright &copy; 2017-2020 Robin Pokorny. Distributed by an <a href="https://github.com/robinpokorny/dead-simple/blob/master/LICENSE">MIT license.</a>'
+
+gh_edit_link: true
+gh_edit_link_text: 'Edit this page on GitHub'
+gh_edit_repository: 'https://github.com/robinpokorny/dead-simple'
+gh_edit_branch: 'master'
+gh_edit_view_mode: 'tree'
+
+defaults:
+  - scope:
+      path: 'README.md'
+    values:
+      title: '💀💡 Dead simple PubSub and EventEmitter in JavaScript'
