@@ -1,6 +1,6 @@
 {
   "name": "dead-simple",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Dead simple PubSub and EventEmitter in JavaScript",
   "main": "./index.js",
   "scripts": {
