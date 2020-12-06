@@ -17,6 +17,7 @@
 - **Efficient:** No memory leaks, no duplicate calls, no extra looping.
 - **Clean API:** `sub` and `pub` (or `on` and `emit`), need no more, can't go less.
 - **Modular:** Use only what you need.
+- **Typed** TypeScript definitions are bundled
 
 ## Install
 
@@ -39,7 +40,7 @@ import eventEmitter from "dead-simple/eventEmitter";
 // === PubSub ======
 const clicks = pubsub();
 
-const unSub = clicks.sub(target => console.log(`Clicked on ${target}!`));
+const unSub = clicks.sub((target) => console.log(`Clicked on ${target}!`));
 
 clicks.pub("button");
 // -> Clicked on button!
@@ -53,9 +54,9 @@ clicks.pub("link");
 // eventEmitter = named PubSub
 const events = eventEmitter();
 
-events.on("click", target => console.log(`Clicked on ${target}!`));
+events.on("click", (target) => console.log(`Clicked on ${target}!`));
 
-const unSubChange = events.on("change", newValue =>
+const unSubChange = events.on("change", (newValue) =>
   console.log(`Value is now ${newValue}!`)
 );
 
@@ -99,19 +100,19 @@ We were able to get down to **91B** for PubSub:
 
 ```js
 export default (s = new Set()) => ({
-  pub: d => s.forEach(f => f(d)),
-  sub: f => s.add(f).delete.bind(s, f)
+  pub: (d) => s.forEach((f) => f(d)),
+  sub: (f) => s.add(f).delete.bind(s, f),
 });
 ```
 
 And **139B** for EventEmitter (`p` is PubSub):
 
 ```js
-export default e => (
+export default (e) => (
   (e = new Map()),
   Object.freeze({
     on: (n, f) => (e.has(name) || e.set(n, p()), e.get(n).sub(f)),
-    emit: (n, d) => e.has(n) && e.get(n).pub(d)
+    emit: (n, d) => e.has(n) && e.get(n).pub(d),
   })
 );
 ```
